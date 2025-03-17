@@ -658,7 +658,11 @@ async function HandleCME(): Promise<void> {
       HandleFiles()
     } else { return }}
 
-export const cme: BSPlusPlugin = {
+export const cme = {
+  id: 'cme',
+  name: `RobinAnd's Custom Message Editor`,
+  description: 'Revamped SEQTA Editor',
+  version: '1.0.0',
   settings: {
     EnableCME: {
       type: 'boolean',
