@@ -362,9 +362,7 @@ import {
   }
   
 
-async function handleDirectMessages(node: Element): Promise<void> {
-
-    if (!(node instanceof HTMLElement)) return
+async function HandleCME(): Promise<void> {
     function AppendID(response: string) {
       `Push the ID to the fields`
       const obj = JSON.parse(response)
@@ -659,3 +657,16 @@ async function handleDirectMessages(node: Element): Promise<void> {
       // Call the FileHandler
       HandleFiles()
     } else { return }}
+
+export const cme: BSPlusPlugin = {
+  id: 'cme',
+  name: 'Custom message editor',
+  description: 'Replaces the Editor entirely',
+  
+  run: async (api) => {
+    const element = await api.dom.waitForElement('.uiSlidePane');
+    
+    api.events.on('pageLoad', await HandleCME());
+
+  }
+};
