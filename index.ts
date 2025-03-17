@@ -659,14 +659,17 @@ async function HandleCME(): Promise<void> {
     } else { return }}
 
 export const cme: BSPlusPlugin = {
-  id: 'cme',
-  name: 'Custom message editor',
-  description: 'Replaces the Editor entirely',
-  
+  settings: {
+    EnableCME: {
+      type: 'boolean',
+      default: false,
+      description: `Enable RobinAnd's Custom Message Editor`
+    },
+  },
   run: async (api) => {
     const element = await api.dom.waitForElement('.uiSlidePane');
     
-    api.events.on('pageLoad', await HandleCME());
+    await HandleCME()
 
   }
 };
