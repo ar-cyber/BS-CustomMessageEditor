@@ -1,7 +1,7 @@
 // my-awesome-plugin.ts
 import { Plugin, PluginAPI, PluginSettings} from 'betterseqta-plugin-api';
 import { HandleCME } from "index.ts";
-export interface MyAwesomePluginSettings extends PluginSettings {
+export interface CustomMessageEditorSettings extends PluginSettings {
   enabled: {
     type: 'boolean';
     default: true;
@@ -11,17 +11,17 @@ export interface MyAwesomePluginSettings extends PluginSettings {
   // Add more settings as needed
 }
 
-export interface MyAwesomePluginStorage {
+export interface CMEPluginStorage {
   lastRun: string;
   // Add more storage fields as needed
 }
 
-const cme: Plugin<MyAwesomePluginSettings, MyAwesomePluginStorage> = {
+const cme: Plugin<CustomMessageEditorSettings, CMEPluginStorage> = {
   id: 'cme',
   name: 'Custom Message Editor',
   description: 'An officially endorsed plugin adding custom message editor plugin.',
   version: '1.0.0',
-  author: 'Your Name',
+  author: 'Andrew R',
   license: 'MIT',
   settings: {
     enabled: {
