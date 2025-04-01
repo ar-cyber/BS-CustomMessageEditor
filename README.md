@@ -8,7 +8,7 @@ The first community made plugin for betterseqta+
 4. Copy plugin.ts and index.ts
 5. Copy `css/ckeditor.css` into BetterSEQTA+'s `src/css` folder.
 6. Add the following before the Monofile line `...monofile...`:
-   ```
+   ```typescript
    import {customMessageEditorPlugin} from "./built-in/CME/plugin.ts"
    pluginManager.registerPlugin(customMessageEditorPlugin);
    ```
