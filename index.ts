@@ -75,7 +75,7 @@ import {
   
   import "ckeditor5/ckeditor5.css"
   
-  import "./css/ckeditor.css"
+  import "@/css/ckeditor.css"
   import { toInteger } from "lodash"
   
   const editorConfig = {
