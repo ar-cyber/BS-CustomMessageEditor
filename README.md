@@ -2,8 +2,8 @@
 The first community made plugin for betterseqta+
 
 ## Installation
-1. Clone this repo
-2. Add modules to the root of BetterSEQTA+ (append all of the `dependencies` in our `package.json` into the BetterSEQTA+ `package.json`.)
+1. Clone this repo and BetterSEQTA+'s repo
+2. Copy everything in `modules.json` to the `package.json` file in BetterSEQTA+
 3. Create a new folder in `src/plugins/built-in/` called `CME`
 4. Copy plugin.ts and index.ts
 5. Copy `css/ckeditor.css` into BetterSEQTA+'s `src/css` folder.

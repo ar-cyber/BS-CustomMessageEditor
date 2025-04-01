@@ -2,9 +2,9 @@
 import { BasePlugin } from "@/plugins/core/settings";
 import { booleanSetting, defineSettings, Setting } from "@/plugins/core/settingsHelpers";
 import { type Plugin } from "@/plugins/core/types";
-import { handleCME } from "index.ts"
+import { HandleCME } from "./index.ts"
 // Code
-const customMessageEditorPlugin: Plugin<typeof settings> = {
+export const customMessageEditorPlugin: Plugin<typeof settings> = {
   id: "cme",
   name: "Custom Message Editor",
   description: "Working custom message editor for SEQTA Learn. Officially endorsed plugin.",
@@ -12,8 +12,6 @@ const customMessageEditorPlugin: Plugin<typeof settings> = {
   disableToggle: true,
 
   run: async (api) => {
-    api.seqta.onMount(".assessmentsWrapper", handleCME)
+    await api.seqta.onMount(".assessmentsWrapper", await HandleCME())
   }
 };
-
-export default customMessageEditorPlugin;

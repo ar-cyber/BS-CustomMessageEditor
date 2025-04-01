@@ -362,7 +362,7 @@ import {
   }
   
 
-async function HandleCME(): Promise<void> {
+export async function HandleCME(): Promise<void> {
     function AppendID(response: string) {
       `Push the ID to the fields`
       const obj = JSON.parse(response)
