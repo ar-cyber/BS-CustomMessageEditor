@@ -434,7 +434,7 @@ export async function HandleCME(): Promise<void> {
       window.location.reload() 
       return
     }
-    if (settingsState.cme) { // As this script runs regardless if the settingsState is set, this is REQUIRED.
+    if (true === true) { // As this script runs regardless if the settingsState is set, this is REQUIRED.
       document.getElementById("content")?.remove()
       console.info("[BetterSEQTA+] Loading Message Editor")
       var closeelement = document.querySelector('[data-id="send"]') as HTMLElement
