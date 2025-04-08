@@ -16,3 +16,5 @@ The first community made plugin for betterseqta+
 
 ## Usage
 Toggle the setting in settings and refresh your SEQTA. All previous features + a new editor will be present in your compose message dialog.
+## Contributions
+Please create a pull request to fix issues with the extension.
